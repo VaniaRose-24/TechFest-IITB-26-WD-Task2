@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Campus Interactive 3D Map | TechFest IITB</title>
+  <meta name="description" content="Explore the interactive 3D model of our sustainable, low-poly eco-campus, featuring landmarks, animated DNA sculpture, live delegates, and particle systems.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="module" crossorigin src="/assets/index-DxF7-NfQ.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-B9XI59Z8.css">
+</head>
+<body>
+  <!-- Three.js Canvas -->
+  <canvas id="webgl-canvas"></canvas>
+
+  <!-- 3D Coordinate projected HTML overlays (Delegate Badges) -->
+  <div id="delegates-overlay" class="delegates-overlay"></div>
+
+  <!-- Floating Tooltip for Raycaster Hover -->
+  <div id="tooltip" class="tooltip">Building Name</div>
+
+  <!-- Header -->
+  <header class="app-header">
+    <div class="logo">
+      <i class="fa-solid fa-leaf green-glow"></i>
+      <span>ECO-CAMPUS <span class="accent">3D</span></span>
+    </div>
+    <div class="header-tagline">Sustainable Architecture Visualizer</div>
+  </header>
+
+  <!-- Head-Up Display (HUD) -->
+  <div id="hud-container" class="glass-panel hud-container">
+    <div class="hud-item">
+      <i class="fa-solid fa-compass"></i>
+      <div class="hud-text">
+        <span class="hud-label">LANDMARK</span>
+        <span id="hud-landmark" class="hud-val">Overview</span>
+      </div>
+    </div>
+    <div class="hud-item">
+      <i class="fa-solid fa-users"></i>
+      <div class="hud-text">
+        <span class="hud-label">VISITORS</span>
+        <span id="hud-visitors" class="hud-val">0</span>
+      </div>
+    </div>
+    <div class="hud-item">
+      <i class="fa-solid fa-gauge-high"></i>
+      <div class="hud-text">
+        <span class="hud-label">PERFORMANCE</span>
+        <span id="hud-fps" class="hud-val">-- FPS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Top Right Utility Buttons -->
+  <div class="utility-bar">
+    <button id="mute-btn" class="utility-btn" title="Toggle Sound">
+      <i class="fa-solid fa-volume-high"></i>
+    </button>
+  </div>
+
+  <!-- Unified Left Control Panel -->
+  <aside id="control-panel" class="glass-panel main-sidebar">
+    <!-- Tabs Header Row -->
+    <div class="tabs-header">
+      <button class="tab-btn active" data-tab="landmarks">
+        <i class="fa-solid fa-building-columns"></i>
+        <span>Landmarks</span>
+      </button>
+      <button class="tab-btn" data-tab="navigation">
+        <i class="fa-solid fa-map"></i>
+        <span>Navigation</span>
+      </button>
+      <button class="tab-btn" data-tab="timeline">
+        <i class="fa-solid fa-timeline"></i>
+        <span>Timeline</span>
+      </button>
+      <button class="tab-btn" data-tab="sustainability">
+        <i class="fa-solid fa-circle-nodes"></i>
+        <span>Eco-Stats</span>
+      </button>
+    </div>
+
+    <!-- Scrollable Tab Content Container -->
+    <div class="tab-content" id="tab-content">
+      <!-- Dynamic Javascript Content Injected Here -->
+    </div>
+  </aside>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Loading Screen & Enter Portal -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loader-content">
+      <div class="loading-spinner" id="loading-spinner"></div>
+      <h2 id="loader-title">Constructing Eco-Campus...</h2>
+      <p id="loader-status">Initializing Three.js & Generating Procedural Terrain</p>
+      
+      <div class="progress-container" id="progress-container">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+      </div>
+
+      <button id="enter-btn" class="enter-btn">
+        <span>ENTER ECO-CAMPUS</span>
+        <i class="fa-solid fa-circle-play"></i>
+      </button>
+    </div>
+  </div>
+
+</body>
+</html>
