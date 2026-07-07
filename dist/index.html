@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eco-Campus Interactive 3D Map | TechFest IITB</title>
-  <meta name="description" content="Explore the interactive 3D model of our sustainable, low-poly eco-campus, featuring landmarks, animated DNA sculpture, live delegates, and particle systems.">
+  <title>Techfest IIT Bombay 2026 | Interactive 3D Campus</title>
+  <meta name="description" content="Explore the interactive 3D digital twin of Techfest IIT Bombay 2026, featuring cutting-edge science, technology, innovation, and sustainability showcases.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <script type="module" crossorigin src="/assets/index-DxF7-NfQ.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-B9XI59Z8.css">
+  <script type="module" crossorigin src="/assets/index-BF-ILUhS.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CDSqUNaS.css">
 </head>
 <body>
   <!-- Three.js Canvas -->
@@ -22,13 +22,27 @@
   <!-- Floating Tooltip for Raycaster Hover -->
   <div id="tooltip" class="tooltip">Building Name</div>
 
+  <!-- Live Event Marquee Ticker -->
+  <div class="live-ticker-container">
+    <div class="ticker-label"><i class="fa-solid fa-tower-broadcast"></i> LIVE TICKER</div>
+    <div class="ticker-wrapper">
+      <div class="ticker-text">
+        <span>⚡ ROBOWARS CHAMPIONSHIP ACTIVE AT CONVOCATION ARENA</span>
+        <span>🛸 DRONE RACING GRAND PRIX IN PROGRESS AT GYMKHANA TRACK</span>
+        <span>🎮 NATIONAL ESPORTS FINALS LIVE AT SAC CYBER DOME</span>
+        <span>🔬 TECHCONNECT GLOBAL EXHIBITIONS OPEN AT INFINITE CORRIDOR</span>
+        <span>🎟️ DELEGATE REGISTRATIONS AND PASSES ACTIVE AT MAIN ENTRY GATE</span>
+      </div>
+    </div>
+  </div>
+
   <!-- Header -->
   <header class="app-header">
     <div class="logo">
-      <i class="fa-solid fa-leaf green-glow"></i>
-      <span>ECO-CAMPUS <span class="accent">3D</span></span>
+      <i class="fa-solid fa-atom cyan-glow"></i>
+      <span>TECHFEST <span class="accent">2026</span></span>
     </div>
-    <div class="header-tagline">Sustainable Architecture Visualizer</div>
+    <div class="header-tagline">IIT Bombay • Digital Twin Simulator</div>
   </header>
 
   <!-- Head-Up Display (HUD) -->
@@ -72,16 +86,16 @@
         <span>Landmarks</span>
       </button>
       <button class="tab-btn" data-tab="navigation">
-        <i class="fa-solid fa-map"></i>
-        <span>Navigation</span>
+        <i class="fa-solid fa-route"></i>
+        <span>Tours</span>
       </button>
       <button class="tab-btn" data-tab="timeline">
-        <i class="fa-solid fa-timeline"></i>
+        <i class="fa-solid fa-calendar-days"></i>
         <span>Timeline</span>
       </button>
       <button class="tab-btn" data-tab="sustainability">
-        <i class="fa-solid fa-circle-nodes"></i>
-        <span>Eco-Stats</span>
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Stats</span>
       </button>
     </div>
 
@@ -98,8 +112,8 @@
   <div id="loading-screen" class="loading-screen">
     <div class="loader-content">
       <div class="loading-spinner" id="loading-spinner"></div>
-      <h2 id="loader-title">Constructing Eco-Campus...</h2>
-      <p id="loader-status">Initializing Three.js & Generating Procedural Terrain</p>
+      <h2 id="loader-title">Booting Techfest 2026 Twin...</h2>
+      <p id="loader-status">Initializing Three.js & Spawning Innovation Zones</p>
       
       <div class="progress-container" id="progress-container">
         <div class="progress-bar">
@@ -108,7 +122,7 @@
       </div>
 
       <button id="enter-btn" class="enter-btn">
-        <span>ENTER ECO-CAMPUS</span>
+        <span>ENTER TECHFEST 2026</span>
         <i class="fa-solid fa-circle-play"></i>
       </button>
     </div>
